@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<body>
+    <style>
+        .news{
+            width:200px;
+            height:200px;
+            display: none;
+            background-color: red;
+
+        }
+    </style>
+    <div class="news">
+        hi mf
+    </div>
+    <div class="news">
+        hi mf iam fucked
+    </div>
+    <div class="news">
+        hi mf iam jithin
+    </div>
+    <script>
+        var slideIndex = 0;
+        carousel();
+        
+        function carousel() {
+          var i;
+          var x = document.getElementsByClassName("news");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none"; 
+          }
+          slideIndex++;
+          if (slideIndex > x.length) {slideIndex = 1} 
+          x[slideIndex-1].style.display = "block"; 
+          setTimeout(carousel, 2000); 
+        }
+        </script>
+</body>
